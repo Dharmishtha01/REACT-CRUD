@@ -1,38 +1,194 @@
+body {
+  background-color: #f4f4f9;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  padding: 20px;
+  margin: 0 auto;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+  margin-left: 15%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.form input {
+  margin: 5px 0;
+  padding: 10px;
+  width: 40%; 
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+.form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  margin: 0 auto;
+  width: 80%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 5px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+th {
+  background-color: #405D72;
+  color: #ffffff;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.delete {
+  background-color: #dc3545;
+}
+
+.delete:hover {
+  background-color: #c82333;
+}
+
+.edit {
+  background-color: #cfa723;
+}
+.edit:hover {
+  background-color: #cfa723;
+}
+
+.form button.update {
+  background-color: #28a745;
+}
+.lable {
+  display: flex;
+  justify-content: left;
+}
+.error {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0px;
+  width: 100%;
+  margin-left: 59%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+button.delete{
+  background-color: #dc3545;
+}
+.header h1 {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.search {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.noItemsMsg {
+  text-align: center;
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+}
+
+.noSearchResultsMsg {
+  text-align: center;
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px;
+}
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid #c3e6cb;
+  border-radius: 5px;
+  width: 250px;
+  position: absolute;
+  left: 40%;
+}
+.reset {
+  margin-left: 10px;
+  background-color: #f0ad4e;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 600px) {
+  .form input {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .error{
+    margin-left: 0;
+
   }
 }
